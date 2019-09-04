@@ -11,6 +11,7 @@ const port = process.env.PORT || 1700;
 
 const roleRoutes = require('./src/routes/role')
 const userRoutes = require('./src/routes/user')
+const categoryRoutes = require('./src/routes/category')
 
 app.listen(port, () => {
     console.log(`Server started with port: ${port}`)
@@ -26,3 +27,4 @@ app.use(express.static(__dirname + '/uploads'))
 
 app.use('/roles', roleRoutes)
 app.use('/users', userRoutes)
+app.use('/categories', categoryRoutes)
