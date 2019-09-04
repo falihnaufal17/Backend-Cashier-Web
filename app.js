@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const app = express();
 const xssFilter = require('x-xss-protection')
 const logger = require('morgan')
+const cors = require('cors')
 
 const port = process.env.PORT || 1700;
 
@@ -18,6 +19,7 @@ app.listen(port, () => {
     console.log(`Server started with port: ${port}`)
 });
 
+app.use(cors())
 app.use(xssFilter())
 app.use(logger('dev'))
 
