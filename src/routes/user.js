@@ -5,8 +5,8 @@ const userController = require('../controllers/user')
 
 Routes
     .all('/*', auth.authInfo)
-    .get('/', auth.accessToken, userController.getAllUser)
-    .get('/:id_user', auth.accessToken, userController.getUserById)
+    .get('/', userController.getAllUser)
+    .get('/:id_user', userController.getUserById)
     .post('/register', userController.register)
     .post('/login', userController.login)
 
