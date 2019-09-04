@@ -9,6 +9,8 @@ const path = require('path')
 
 const port = process.env.PORT || 1700;
 
+const roleRoutes = require('./src/routes/role')
+
 app.listen(port, () => {
     console.log(`Server started with port: ${port}`)
 });
@@ -20,3 +22,5 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static(__dirname + '/uploads'))
+
+app.use('/roles', roleRoutes)
