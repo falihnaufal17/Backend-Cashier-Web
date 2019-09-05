@@ -19,7 +19,7 @@ let storage = multer.diskStorage({
 let upload = multer({ storage: storage })
 
 Route
-    .all('/*', auth.authInfo)
+    // .all('/*', auth.authInfo)
     .get('/', menuController.getAllMenu)
     .get('/id_menu', menuController.getMenuById)
     .post('/', upload.single('image'), menuController.addMenu)

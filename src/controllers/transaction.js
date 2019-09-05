@@ -64,7 +64,7 @@ module.exports = {
     },
     addTransaction: (req, res) => {
         let data = {
-            id_menu: req.body.id_menu,
+            id_transaction: req.body.id_transaction,
             id_user: req.body.id_user,
             total: req.body.total,
             created_at: new Date,
