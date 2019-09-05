@@ -1,0 +1,9 @@
+Username: LyQEEjVsrM
+
+Database name: LyQEEjVsrM
+
+Password: S5102AtAc8
+
+Server: remotemysql.com
+
+Port: 3306
