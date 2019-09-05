@@ -19,7 +19,7 @@ app.listen(port, () => {
     console.log(`Server started with port: ${port}`)
 });
 
-// app.use(cors())
+app.use(cors())
 app.use(xssFilter())
 app.use(logger('dev'))
 
