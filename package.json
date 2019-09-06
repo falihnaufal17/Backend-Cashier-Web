@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/falihnaufal17/Backend-Cashier-Web#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.4.0",
     "body-parser": "^1.19.0",
     "cloudinary": "^1.14.0",
     "cors": "^2.8.5",

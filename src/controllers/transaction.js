@@ -1,6 +1,8 @@
 const miscHelper = require('../helpers/helper')
-const transactionModel = require('../models/transaction')
+// const transactionModel = require('../models/transaction')
+// const SGmail = require('@sendgrid/mail')
 
+SGmail.setApiKey('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')
 module.exports = {
     getAllTransaction: (req, res) => {
         transactionModel.getAllTransaction()
@@ -72,6 +74,16 @@ module.exports = {
         }
         transactionModel.addTransaction(data)
             .then(() => {
+                // const msg = {
+                //     to: 'falihnaufal1700@gmail.com',
+                //     from: 'falfal@cashier.com',
+                //     subject: 'Nota transaksi',
+                //     text: 'Pelanggan Yth. ',
+                //     html: '<strong>Some text for email bangsatttt</strong>',
+                // };
+                // SGmail.send(msg).then(result => {
+                //     miscHelper.response(res, data, 200);
+                // })
                 miscHelper.response(res, data, 201)
             })
             .catch((error) => {
