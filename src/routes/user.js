@@ -4,7 +4,7 @@ const auth = require('../helpers/auth')
 const userController = require('../controllers/user')
 
 Routes
-    .all('/*', auth.authInfo)
+    // .all('/*', auth.authInfo)
     .get('/', userController.getAllUser)
     .get('/:id_user', userController.getUserById)
     .post('/register', userController.register)

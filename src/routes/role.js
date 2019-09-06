@@ -4,7 +4,7 @@ const auth = require('../helpers/auth')
 const roleController = require('../controllers/role')
 
 Routes
-    .all('/*', auth.authInfo)
+    // .all('/*', auth.authInfo)
     .get('/', roleController.getAllRole)
     .post('/', roleController.addRole)
     .delete('/:id_role', roleController.deleteRole)

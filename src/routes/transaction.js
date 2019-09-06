@@ -4,7 +4,7 @@ const auth = require('../helpers/auth')
 const transactionController = require('../controllers/transaction')
 
 Routes
-    .all('/*', auth.authInfo)
+    // .all('/*', auth.authInfo)
     .get('/', transactionController.getAllTransaction)
     .get('/day', transactionController.getTransactionByDay)
     .get('/week', transactionController.getTransactionByWeek)

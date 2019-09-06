@@ -4,7 +4,7 @@ const auth = require('../helpers/auth')
 const categoryController = require('../controllers/category')
 
 Routes
-    .all('/*', auth.authInfo)
+    // .all('/*', auth.authInfo)
     .get('/', categoryController.getAllCategory)
     .post('/', categoryController.addCategory)
     .delete('/:id_category', categoryController.deleteCategory)
